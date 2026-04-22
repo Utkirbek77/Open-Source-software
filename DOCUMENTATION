@@ -1,0 +1,26 @@
+OpenTrack Management Script Overview
+
+This script is a Python-based tool for managing open-source project contributors, tracking software issues, and generating automated reports. It was created by Toshboev Utkirbek Uktam Ugli.
+
+ Core Functionalities
+
+1. Project Metadata & Contributor Tracking
+Project Info: Stores primary details like name, version, and lead in a tuple.
+Contributor Data: Collects names, roles, languages, and commit counts into a list of dictionaries.
+Data Processing: Sorts contributors alphabetically and manages a "Tech Stack" using sets to track unique programming languages.
+
+ 2. Issue Management System
+Data Collection: Tracks 5 individual issues with details for ID, Title, Priority, Reporter, and Status.
+Filtering: Automatically counts "Open" issues and identifies "Urgent" tasks labeled as "Critical" or "High".
+Analytics: Calculates a priority breakdown and identifies the "Top Reporter" based on the number of issues submitted.
+
+3. Automated File Operations
+Folder Creation: Creates a directory named `open_track` to store project files.
+CSV Export: Writes issue data into `issues.csv` for use in external spreadsheet software.
+Detailed Reporting: Generates a `project_report.txt` file containing a full summary of the project status and active tech stack.
+Data Persistence: Uses file appending to add a dedicated "URGENT ISSUES" section to the final report.
+
+Technical Implementation
+Data Structures: Utilizes Tuples, Lists, Dictionaries, and Sets.
+Error Handling: Includes `try-except` blocks to manage potential issues during file reading and writing.
+File I/O: Demonstrates different methods for reading data, including `read()`, `readline()`, and `readlines()`.
