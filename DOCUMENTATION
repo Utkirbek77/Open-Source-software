@@ -25,3 +25,64 @@ Technical Implementation
 Data Structures: Utilizes Tuples, Lists, Dictionaries, and Sets.
 Error Handling: Includes `try-except` blocks to manage potential issues during file reading and writing.
 File I/O: Demonstrates different methods for reading data, including `read()`, `readline()`, and `readlines()`.
+
+
+
+OpenTrack — Project Management System
+
+---
+
+Project Overview
+
+OpenTrack is a command-line project management tool built in Python. It demonstrates data structures, user input, file handling, and basic data analysis.
+
+---
+
+Main Variables and Their Purpose
+
+- `project` (Tuple) → Stores project information (name, version, year, language, lead). Used because tuples are immutable.
+- `contributors` (List of Dictionaries) → Stores details of all contributors (name, role, language, commits, country, status).
+- `issues` (List of Dictionaries) → Holds all created issues with id, title, type, priority, reporter and status.
+- `names` and `sorted_names` (List) → Used to extract and sort contributor names.
+- `reporters` (Set) → Stores unique reporter names.
+- `tech_stack` (Set) → Stores programming languages used by contributors.
+- `priorities_set` (Set) → Checks whether Critical priority exists.
+- `priority_count` (Dictionary) → Counts number of issues for each priority level.
+- `status_groups` (Dictionary) → Groups issue titles according to their status.
+- `reporter_count` (Dictionary) → Counts issues per reporter to find the top reporter.
+- `urgent` (List) → Contains titles of all Critical and High priority issues.
+- `folder_name` (String) → Name of the folder created to save reports.
+- `report_path` & `csv_path` (String) → Full file paths for project_report.txt and issues.csv.
+
+---
+
+Key Code Sections Explained
+
+- Section 1 → Creates project tuple and collects contributor information through user input.
+- Section 2 → Creates 5 issues and performs analysis using sets and dictionaries (counting, grouping, finding top reporter).
+- Section 3 → Creates folder, writes CSV and text report, reads the report using different file methods.
+
+---
+
+Functions Used in the Code
+
+- `print()` → To display outputs and results
+- `input()` → To get data from user (contributors and issues)
+- `int()` → Convert commits input to number
+- `len()` → Get total contributors, issues, lines etc.
+- `sorted()` → Sort list of contributor names
+- `range()` → Control loops for input
+- `open()` with `with` statement → Read and write files
+- `os.makedirs()` → Create new folder
+- `os.listdir()` → Show files in the created folder
+- `.append()` → Add items to lists
+- `.update()` → Add new key-value in dictionary
+- `.get()` → Safely access dictionary values
+- `.pop()` → Remove a key from dictionary
+- Set methods (`.add()`, `.union()`, `.intersection()`, `.difference()`, `.discard()`) → Perform set operations
+
+---
+
+How to Run
+
+python3 week_5_completed.py
